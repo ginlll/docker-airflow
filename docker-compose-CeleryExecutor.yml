@@ -13,6 +13,7 @@ services:
             - ./dags:/usr/local/airflow/dags
             # Uncomment to include custom plugins
             - ./plugins:/usr/local/airflow/plugins
+            - ./webserver_config.py:/usr/local/airflow/webserver_config.py
         ports:
             - "8080:8080"
         command: webserver
